@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fortune-cookie-101": {
+      "hosting": {
+        "dataEntryFrontend": [
+          "fortune-cookie-101"
+        ]
+      }
+    }
+  }
+}
