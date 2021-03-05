@@ -24,10 +24,11 @@
     <div>{{ uploadPercent | async }}</div>
     <!-- <a [href]="downloadURL | async">{{ downloadURL | async }}</a> -->
     <!-- <img src="{{downloadURL | async}}" > -->
-    <div *ngIf="!!image_urls.length">
+    <div *ngIf="!!image_urls.controls.length">
 
-        <div *ngFor="let image_url of image_urls">
-            <img src="{{image_url}}" >
+        <div *ngFor="let image_url of image_urls.controls; let i = index">
+            <img src="{{image_url.value}}" >
+            <button type="button" (click)="delete(i)">Delete</button>
         </div>
     </div>
 
